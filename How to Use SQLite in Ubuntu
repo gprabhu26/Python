@@ -1,0 +1,46 @@
+How to Use SQLite in Ubuntu
+	SQLite is a simple yet powerful embedded SQL database engine. Unlike other database systems, SQLite does not need to run on a server, and all information is stored in a single file on disk. SQLite is open source, and is used by many small business systems and applications, including Mozilla's Firefox browser, Google's Chrome browser and McAfee's anti-virus software. SQLite is simple to install and run from the command line on Ubuntu Linux, and can be a good choice for custom small business applications that can run across a range of devices.
+	
+	
+1
+
+Press “Ctrl-Alt-T” to open a terminal window in Ubuntu.
+
+2
+
+Type "sudo apt-get install sqlite3 libsqlite3-dev" (omit the quotes here and throughout) to install SQLite and its development files. The sudo command allows SQLite3 to install with the necessary root level permissions. Enter your user password when requested. The latest version is downloaded and installed from the Ubuntu repositories.
+
+3
+
+Create a new database from the command line by typing:
+
+sqlite3 mydatabase.db
+
+This creates a new database file in the current directory.
+
+4
+
+Type in the required SQL statements to generate a table, insert new records or query existing data. For example, to create a new table, type:
+
+CREATE TABLE myTable (id INTEGER, name VARCHAR(100));
+
+This creates a table named "myTable" with two fields, "id" and "name." Always terminate SQL statement with a semicolon.
+
+5
+
+Type ".help" to see a list of the available SQLite commands. All commands start with a period -- for example, type ".tables" to show a list of the tables in the current database.
+
+6
+
+Type ".quit" to close the SQLite client, then type "exit" at the command line to close the terminal window.
+
+
+
+Reference: https://smallbusiness.chron.com/create-microsoft-sql-instance-52388.html
+
+
+To intall sqlite browser:
+$ sudo apt-get install sqlitebrowser
+
+
+Reference: https://linuxhint.com/install_sqlite_browser_ubuntu_1804/
